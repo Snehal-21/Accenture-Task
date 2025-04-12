@@ -30,26 +30,26 @@ function App() {
           </span> User Profiles
         </h1>
 
-        <div className="w-[400px] my-4 ml-auto">
-          <input
-            type="text"
-            placeholder="Search by name or role..."
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-        </div>
+        <div className="w-full sm:w-[300px] md:w-[400px] my-4 ml-auto">
+  <input
+    type="text"
+    placeholder="Search by name or role..."
+    className="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+    value={search}
+    onChange={(e) => setSearch(e.target.value)}
+  />
+</div>
 
-        {filteredUsers.length > 0 ? (
-        <div className=" grid gap-6 grid-cols-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-4">
-        {filteredUsers.map((user) => (
-          <UserCard key={user.id} user={user} />
-        ))}
-      </div>
-      
-        ) : (
-          <p className="text-center text-gray-500">No users to display.</p>
-        )}
+{filteredUsers.length > 0 ? (
+  <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-4">
+    {filteredUsers.map((user) => (
+      <UserCard key={user.id} user={user} />
+    ))}
+  </div>
+) : (
+  <p className="text-center text-gray-500">No users to display.</p>
+)}
+
       </div>
     </div>
   );

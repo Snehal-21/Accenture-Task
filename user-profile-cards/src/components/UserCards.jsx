@@ -3,8 +3,8 @@ import { FaUserCircle } from "react-icons/fa";
 
 function UserCard({ user }) {
   return (
-    <div className="bg-white p-6 rounded-2xl border shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center">
-      {/* <div className="text-6xl mb-4">👤</div> */}
+<div className="bg-white p-6 rounded-2xl border shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center w-full">
+{/* <div className="text-6xl mb-4">👤</div> */}
       <FaUserCircle className="text-6xl text-gray-400 mb-4" />
       <h2 className="text-xl font-bold text-gray-800">{user.name}</h2>
       <p className="text-gray-600">{user.role}</p>
